@@ -41,4 +41,5 @@ switch (o) {
         break;
     default :
         console.log("False")
+        break;
 }
