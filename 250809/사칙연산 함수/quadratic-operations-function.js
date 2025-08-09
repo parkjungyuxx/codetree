@@ -22,7 +22,7 @@ const multiply = (a, c) => {
 }
 
 const divide = (a, c) => {
-    const result = a/c
+    const result = parseInt(a/c)
     return console.log(`${a} / ${c} = ${result}`)
 }
 
