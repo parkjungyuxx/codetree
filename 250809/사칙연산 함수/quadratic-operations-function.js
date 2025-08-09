@@ -39,4 +39,6 @@ switch (o) {
     case "/" :
         divide(a,c)
         break;
+    default :
+        console.log("False")
 }
