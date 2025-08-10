@@ -6,7 +6,7 @@ let a = input[1].split(" ").map(Number);
 let b = input[2].split(" ").map(Number);
 
 // Please Write your code here.
-let sliced;
+let sliced = []
 for (let i = 0; i < a.length; i++) {
    if (a[i] === b[0]) {
     sliced = a.slice(i, b.length+1)
