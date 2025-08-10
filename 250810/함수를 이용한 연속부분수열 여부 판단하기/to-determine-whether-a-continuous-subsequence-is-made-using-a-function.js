@@ -8,21 +8,15 @@ let b = input[2].split(" ").map(Number);
 // Please Write your code here.
 let sliced;
 for (let i = 0; i < a.length; i++) {
-    if (a[i] === b[0]) {
-        sliced = a.slice(i, b.length+i)
-    }
+   if (a[i] === b[0]) {
+    sliced = a.slice(i, b.length+1)
+   }
 }
 
-const solution = () => {
-    for (let i = 0; i < sliced.length; i++) {
-        if (sliced[i] !== b[i]) {
-        return false
-        }
-    }
-    return true
-}
+const stringA = sliced.join("")
+const stringB = b.join("")
 
-if (solution()) {
+if (stringA === stringB) {
     console.log("Yes")
 } else {
     console.log("No")
