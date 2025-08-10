@@ -12,17 +12,18 @@ for (let i = 0; i < a.length; i++) {
         sliced = a.slice(i, b.length+i)
     }
 }
-const result = []
-for (let i = 0; i < sliced.length; i++) {
-if (sliced[i] === b[i]) {
-    result.push(0)
-} else {
-    result.push(1)
-}
+
+const solution = () => {
+    for (let i = 0; i < sliced.length; i++) {
+        if (sliced[i] !== b[i]) {
+        return false
+        }
+    }
+    return true
 }
 
-if (result.includes(1)) {
-    console.log("No")
-} else {
+if (solution()) {
     console.log("Yes")
+} else {
+    console.log("No")
 }
