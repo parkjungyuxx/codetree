@@ -11,11 +11,16 @@ const conditionA = (i) => {
 }
 
 const conditionB = (i) => {
-    if ()
+    const stringI = i.toString()
+    if (stringI[1] === "5") return true 
+}
+
+const conditionC = (i) => {
+    if (i % 3 === 0 && i % 9 !== 0) return true
 }
 
 for (let i = a; i <= b; i++) {
-    if (i % 2 !== 0 && i.toString()[1] !== 5 && (i % 3 !== 0 && i % 9 === 0)) {
+    if (!conditionA(i) && !conditionB(i) && !conditionC(i)) {
         count++
     }
 }
