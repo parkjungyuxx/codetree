@@ -14,7 +14,7 @@ const lcm = (a,b) => {
 }
 
 const solution = (n) => {
-    if (n === 2) return lcm(numbers[0], numbers[1])
+    if (n === 1) return numbers[n-1]
 
     return lcm(solution(n-1), numbers[n-1]) 
 }
