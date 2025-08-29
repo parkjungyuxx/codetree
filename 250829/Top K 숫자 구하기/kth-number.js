@@ -5,6 +5,6 @@ const nums = input[1].trim().split(' ').map(Number);
 
 // Please Write your code here.
 
-const arr = nums.sort()
+const arr = nums.sort((a,b) => a-b)
 
 console.log(arr[k-1])
