@@ -8,7 +8,7 @@ const forecasts = input.slice(1, n + 1).map(line => line.split(' '));
 
 const filtered = forecasts.filter(el => el.includes("Rain"))
 
-const sorted = filtered.sort((a,b) => a[0] - b[0])
+const sorted = filtered.sort((a,b) => parseInt(a[0].split("-")[0]) - parseInt(b[0].split("-")[0]))
 
 class Weather {
     constructor(date, dayOfWeek, weather) {
