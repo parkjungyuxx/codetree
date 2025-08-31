@@ -15,6 +15,6 @@ const nameSorted = [...students].sort((a,b) => a.name.localeCompare(b.name, "en"
 const heightSorted = [...students].sort((a,b) => b.height - a.height)
 
 console.log("name")
-nameSorted.forEach((el) => console.log(`${el.name} ${el.height} ${el.weight}`))
+nameSorted.forEach((el) => console.log(`${el.name} ${el.height} ${el.weight.toFixed(1)}`))
 console.log(`\nheight`)
 heightSorted.forEach((el) => console.log(`${el.name} ${el.height} ${el.weight.toFixed(1)}`))
