@@ -7,8 +7,8 @@ const points = input.slice(1).map(line => line.trim().split(' ').map(Number));
 // Please Write your code here.
 
 const maped = points.map((el,i) => [Math.abs(el.reduce((a,b) => a+b,0)),i+1])
-const sorted = maped.sort((a,b) => a[0] - b[0])
+const sorted = maped.sort((a,b) => a[0] - b[0] || (a[1] - b[1]))
 
-for (let index of sorted) {
-    console.log(index[1])
+for (const [, idx] of sorted) {
+    console.log(idx)
 }
