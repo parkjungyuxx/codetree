@@ -14,11 +14,11 @@ const arr = Array(length+1).fill(0)
 
 for (let i = 0; i < segments.length; i++) {
     const [start, end] = segments[i]
-    for (let j = start; j <= end; j++) {
+    for (let j = start; j < end; j++) {
         arr[j]+=1
     }
 }
 
-const result = arr.filter((el) => el > 1)
 
-console.log(result.length)
+const max = Math.max(...arr)
+console.log(max)
