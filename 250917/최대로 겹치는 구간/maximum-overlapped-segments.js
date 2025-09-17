@@ -8,19 +8,22 @@ for (let i = 1; i <= n; i++) {
 }
 
 // Please write your code here.
-segments = segments.map((el) => el + 100)
 
-const length = Math.max(...segments.flat())
+const OFFSET = 100
+const MAX_R = 200
 
-const arr = Array(length+1).fill(0)
+const checked = Array(MAX_R + 1).fill(0)
 
-for (let i = 0; i < segments.length; i++) {
-    const [start, end] = segments[i]
-    for (let j = start; j < end; j++) {
-        arr[j]+=1
+segments.forEach(segment => {
+    let [x1, x2] = segment
+
+    x1 += OFFSET
+    x2 += OFFSET
+
+    for (let i = x1; i < x2; i++) {
+        checked[i] += 1
     }
-}
+})
 
-
-const max = Math.max(...arr)
-console.log(max)
+const maxNum = Math.max(...checked)
+console.log(maxNum)
