@@ -19,6 +19,6 @@ for (let i = 0; i < segments.length; i++) {
     }
 }
 
-const max = Math.max(...arr)
+const result = arr.filter((el) => el > 1)
 
-console.log(max)
+console.log(result.length)
