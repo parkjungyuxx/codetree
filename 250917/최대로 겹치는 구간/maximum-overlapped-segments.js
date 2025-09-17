@@ -8,6 +8,8 @@ for (let i = 1; i <= n; i++) {
 }
 
 // Please write your code here.
+segments.forEach((el) => el + 100)
+
 const length = Math.max(...segments.flat())
 
 const arr = Array(length+1).fill(0)
